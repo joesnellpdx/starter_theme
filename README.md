@@ -1,4 +1,4 @@
-=== JSPDX Starter Theme ===
+=== Starter_Theme ===
 
 A Wordpress Theme theme by Joe Snell
 
