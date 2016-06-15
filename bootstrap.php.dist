@@ -3,16 +3,16 @@ if ( ! defined( 'PROJECT' ) ) {
 	define( 'PROJECT', __DIR__ . '/includes/' );
 }
 
-if ( ! defined( 'NWK_DIR' ) ) {
-	define( 'NWK_DIR', __DIR__ . '/' );
+if ( ! defined( 'Project_DIR' ) ) {
+	define( 'Project_DIR', __DIR__ . '/' );
 }
 
 // Place any additional bootstrapping requirements here for PHP Unit.
 if ( ! defined( 'WP_LANG_DIR' ) ) {
 	define( 'WP_LANG_DIR', 'lang_dir' );
 }
-if ( ! defined( 'NWK_PATH' ) ) {
-	define( 'NWK_PATH', 'path' );
+if ( ! defined( 'Project_PATH' ) ) {
+	define( 'Project_PATH', 'path' );
 }
 
 if ( ! file_exists( __DIR__ . '/vendor/autoload.php' ) ) {

@@ -15,7 +15,7 @@ object,
 	height: auto;
 }
 
-.nwk-video,
+.project-video,
 .flexslider,
 video,
 img,
@@ -43,13 +43,13 @@ figcaption {
 	font-style: italic;
 }
 
-.nwk-video {
+.project-video {
 	@include box-shadow(sm-med);
 
 	margin: $space 0rem;
 	border: $border__med solid $white;
 	border-radius: ($border__med * 0.5);
-	.nwk-modal & {
+	.project-modal & {
 		margin: 0rem;
 	}
 }

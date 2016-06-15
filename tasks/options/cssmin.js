@@ -10,7 +10,7 @@ module.exports = {
 		expand: true,
 
 		cwd: 'assets/css/',
-		src: ['nw-kids-theme.css'],
+		src: ['project-theme.css'],
 
 		dest: 'assets/css/',
 		ext: '.min.css'

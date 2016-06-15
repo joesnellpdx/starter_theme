@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package NW Kids Theme
+ * @package Project Theme
  * @since 0.1.0
  */
 
@@ -22,7 +22,7 @@
 
 			if ( 'post' === get_post_type() ) : ?>
 				<div class="entry-meta">
-					<?php NW_Kids\NWKids_Theme\Template_Tags\posted_on(); ?>
+					<?php Project\Project_Theme\Template_Tags\posted_on(); ?>
 				</div><!-- .entry-meta -->
 				<?php
 			endif; ?>
@@ -48,7 +48,7 @@
 
 	<footer class="entry-footer">
 		<div class="container__content">
-			<?php NW_Kids\NWKids_Theme\Template_Tags\entry_footer(); ?>
+			<?php Project\Project_Theme\Template_Tags\entry_footer(); ?>
 		</div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

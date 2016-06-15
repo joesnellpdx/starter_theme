@@ -2,7 +2,7 @@
 /**
  * The main template file
  *
- * @package NW Kids Theme
+ * @package Project Theme
  * @since 0.1.0
  */
 

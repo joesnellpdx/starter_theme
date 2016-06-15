@@ -1,10 +1,10 @@
 {
-	"name": "nw-kids-theme",
-	"description": "Theme for NW Kids Magazine",
+	"name": "project-theme",
+	"description": "Theme for Project Magazine",
 	"version": "0.1.0",
 	"type": "wordpress-theme",
 	"keywords": [],
-	"homepage": "http://www.nwkidsmagazine.com/",
+	"homepage": "http://www.projectidsmagazine.com/",
 	"license": "GPL-2.0+",
 	"authors": [
 		{

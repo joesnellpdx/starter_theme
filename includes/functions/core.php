@@ -1,5 +1,5 @@
 <?php
-namespace NW_Kids\NWKids_Theme\Core;
+namespace Project\Project_Theme\Core;
 
 /**
  * Set up theme defaults and register supported WordPress features.
@@ -56,7 +56,7 @@ function setup() {
  * @return void
  */
 function i18n() {
-	load_theme_textdomain( 'nwk', NWK_PATH . '/languages' );
+	load_theme_textdomain( 'project', Project_PATH . '/languages' );
  }
 
 /**
@@ -72,21 +72,21 @@ function scripts() {
 	/**
 	 * Flag whether to enable loading uncompressed/debugging assets. Default false.
 	 *
-	 * @param bool nwk_script_debug
+	 * @param bool project_script_debug
 	 */
-	$debug = apply_filters( 'nwk_script_debug', false );
+	$debug = apply_filters( 'project_script_debug', false );
 	$min = ( $debug || defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 	wp_enqueue_script(
 		'modernizr-custom',
-		NWK_TEMPLATE_URL . '/assets/js/vendor/modernizr-custom.min.js',
+		Project_TEMPLATE_URL . '/assets/js/vendor/modernizr-custom.min.js',
 		false, '2.7.2'
 	);
 	wp_enqueue_script(
-		'nwk',
-		NWK_TEMPLATE_URL . "/assets/js/nw-kids-theme{$min}.js",
+		'project',
+		Project_TEMPLATE_URL . "/assets/js/project-theme{$min}.js",
 		array(),
-		NWK_VERSION,
+		Project_VERSION,
 		true
 	);
 }
@@ -104,16 +104,16 @@ function styles() {
 	/**
 	 * Flag whether to enable loading uncompressed/debugging assets. Default false.
 	 *
-	 * @param bool nwk_style_debug
+	 * @param bool project_style_debug
 	 */
-	$debug = apply_filters( 'nwk_style_debug', false );
+	$debug = apply_filters( 'project_style_debug', false );
 	$min = ( $debug || defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 	wp_enqueue_style(
-		'nwk',
-		NWK_URL . "/assets/css/nw-kids-theme{$min}.css",
+		'project',
+		Project_URL . "/assets/css/project-theme{$min}.css",
 		array(),
-		NWK_VERSION
+		Project_VERSION
 	);
 }
 
@@ -132,7 +132,7 @@ function header_meta() {
 	 *
 	 * @param string $humanstxt
 	 */
-	$humanstxt = apply_filters( 'nwk_humans', NWK_TEMPLATE_URL . '/humans.txt' );
+	$humanstxt = apply_filters( 'project_humans', Project_TEMPLATE_URL . '/humans.txt' );
 
 	echo '<link type="text/plain" rel="author" href="' . esc_url( $humanstxt ) . '" />';
 }

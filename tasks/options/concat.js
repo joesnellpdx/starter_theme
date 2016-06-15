@@ -11,8 +11,8 @@ module.exports = {
 		src: [
 			// 'assets/js/vendor/vendor-file.js',
 			'bower_components/imagesloaded/imagesloaded.pkgd.js',
-			'assets/js/src/nw-kids-theme.js'
+			'assets/js/src/project-theme.js'
 		],
-			dest: 'assets/js/nw-kids-theme.js'
+			dest: 'assets/js/project-theme.js'
 	}
 };

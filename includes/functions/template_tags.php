@@ -1,5 +1,5 @@
 <?php
-namespace NW_Kids\NWKids_Theme\Template_Tags;
+namespace Project\Project_Theme\Template_Tags;
 
 /**
  * Set up theme defaults and register supported WordPress features.

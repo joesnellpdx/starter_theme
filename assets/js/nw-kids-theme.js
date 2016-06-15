@@ -1,5 +1,5 @@
-/*! NW Kids Theme - v0.1.0
- * http://www.nwkidsmagazine.com/
+/*! Project Theme - v0.1.0
+ * http://www.projectidsmagazine.com/
  * Copyright (c) 2016; * Licensed GPL-2.0+ */
 /*!
  * imagesLoaded PACKAGED v4.1.0

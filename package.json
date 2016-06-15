@@ -1,9 +1,9 @@
 {
-  "name": "nw-kids-theme",
-  "title": "NW Kids Theme",
-  "description": "Theme for NW Kids Magazine",
+  "name": "project-theme",
+  "title": "Project Theme",
+  "description": "Theme for Project Magazine",
   "version": "0.1.0",
-  "homepage": "http://www.nwkidsmagazine.com/",
+  "homepage": "http://www.projectidsmagazine.com/",
   "repository": {
     "type": "git",
     "url": ""

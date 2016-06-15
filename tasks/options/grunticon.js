@@ -29,7 +29,7 @@ module.exports = {
             pngpath: "png",
 
             // prefix for CSS classnames
-            cssprefix: ".nwkids-icon-",
+            cssprefix: ".projectids-icon-",
 
             //primarily for pngs
             defaultWidth: "400px",

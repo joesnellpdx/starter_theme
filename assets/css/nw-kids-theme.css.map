@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "nw-kids-theme.css",
+	"file": "project-theme.css",
 	"sources": [
-		"sass/nw-kids-theme.scss",
+		"sass/project-theme.scss",
 		"sass/global/_functions.scss",
 		"sass/global/_variables.scss",
 		"../../bower_components/sanitize-css/lib/sanitize.scss",

@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer.
  *
- * @package NW Kids Theme
+ * @package Project Theme
  * @since 0.1.0
  */
 ?>

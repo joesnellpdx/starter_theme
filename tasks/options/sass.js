@@ -5,7 +5,7 @@ module.exports = {
 			sourceMap: true
 		},
 		files: {
-			'assets/css/nw-kids-theme.css': 'assets/css/sass/nw-kids-theme.scss'
+			'assets/css/project-theme.css': 'assets/css/sass/project-theme.scss'
 		}
 	}
 };

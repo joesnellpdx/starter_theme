@@ -1,5 +1,5 @@
 <?php
-namespace NW_Kids\NWKids_Theme\Core;
+namespace Project\Project_Theme\Core;
 
 /**
  * This is a very basic test case to get things started. You should probably rename this and make
@@ -13,7 +13,7 @@ namespace NW_Kids\NWKids_Theme\Core;
  *   - https://github.com/10up/wp_mock
  */
 
-use NW_Kids\NWKids_Theme as Base;
+use Project\Project_Theme as Base;
 
 class Core_Tests extends Base\TestCase {
 
@@ -25,14 +25,14 @@ class Core_Tests extends Base\TestCase {
 	 * Make sure all theme-specific constants are defined before we get started
 	 */
 	public function setUp() {
-		if ( ! defined( 'NWK_TEMPLATE_URL' ) ) {
-			define( 'NWK_TEMPLATE_URL', 'template_url' );
+		if ( ! defined( 'Project_TEMPLATE_URL' ) ) {
+			define( 'Project_TEMPLATE_URL', 'template_url' );
 		}
-		if ( ! defined( 'NWK_VERSION' ) ) {
-			define( 'NWK_VERSION', '0.1.0' );
+		if ( ! defined( 'Project_VERSION' ) ) {
+			define( 'Project_VERSION', '0.1.0' );
 		}
-		if ( ! defined( 'NWK_URL' ) ) {
-			define( 'NWK_URL', 'url' );
+		if ( ! defined( 'Project_URL' ) ) {
+			define( 'Project_URL', 'url' );
 		}
 
 		parent::setUp();
@@ -43,10 +43,10 @@ class Core_Tests extends Base\TestCase {
 	 */
 	public function test_setup() {
 		// Setup
-		\WP_Mock::expectActionAdded( 'after_setup_theme',  'NW_Kids\NWKids_Theme\Core\i18n'        );
-		\WP_Mock::expectActionAdded( 'wp_enqueue_scripts', 'NW_Kids\NWKids_Theme\Core\scripts'     );
-		\WP_Mock::expectActionAdded( 'wp_enqueue_scripts', 'NW_Kids\NWKids_Theme\Core\styles'      );
-		\WP_Mock::expectActionAdded( 'wp_head',            'NW_Kids\NWKids_Theme\Core\header_meta' );
+		\WP_Mock::expectActionAdded( 'after_setup_theme',  'Project\Project_Theme\Core\i18n'        );
+		\WP_Mock::expectActionAdded( 'wp_enqueue_scripts', 'Project\Project_Theme\Core\scripts'     );
+		\WP_Mock::expectActionAdded( 'wp_enqueue_scripts', 'Project\Project_Theme\Core\styles'      );
+		\WP_Mock::expectActionAdded( 'wp_head',            'Project\Project_Theme\Core\header_meta' );
 
 		// Act
 		setup();
@@ -63,8 +63,8 @@ class Core_Tests extends Base\TestCase {
 		\WP_Mock::wpFunction( 'load_theme_textdomain', array(
 			'times' => 1,
 			'args' => array(
-				'nwk',
-				NWK_PATH . '/languages'
+				'project',
+				Project_PATH . '/languages'
 			),
 		) );
 
@@ -83,8 +83,8 @@ class Core_Tests extends Base\TestCase {
 		\WP_Mock::wpFunction( 'wp_enqueue_script', array(
 			'times' => 1,
 			'args' => array(
-				'nwk',
-				'template_url/assets/js/nw-kids-theme.min.js',
+				'project',
+				'template_url/assets/js/project-theme.min.js',
 				array(),
 				'0.1.0',
 				true,
@@ -98,15 +98,15 @@ class Core_Tests extends Base\TestCase {
 		\WP_Mock::wpFunction( 'wp_enqueue_script', array(
 			'times' => 1,
 			'args' => array(
-				'nwk',
-				'template_url/assets/js/nw-kids-theme.js',
+				'project',
+				'template_url/assets/js/project-theme.js',
 				array(),
 				'0.1.0',
 				true,
 			),
 		) );
 		\WP_Mock::onFilter( 'special_filter' )
-		        ->with( 'nwk_script_debug' )
+		        ->with( 'project_script_debug' )
 		        ->reply( true );
 
 		scripts();
@@ -121,8 +121,8 @@ class Core_Tests extends Base\TestCase {
 		\WP_Mock::wpFunction( 'wp_enqueue_style', array(
 			'times' => 1,
 			'args' => array(
-				'nwk',
-				'url/assets/css/nw-kids-theme.min.css',
+				'project',
+				'url/assets/css/project-theme.min.css',
 				array(),
 				'0.1.0',
 			),
@@ -135,14 +135,14 @@ class Core_Tests extends Base\TestCase {
 		\WP_Mock::wpFunction( 'wp_enqueue_style', array(
 			'times' => 1,
 			'args' => array(
-				'nwk',
-				'url/assets/css/nw-kids-theme.css',
+				'project',
+				'url/assets/css/project-theme.css',
 				array(),
 				'0.1.0',
 			),
 		) );
 		\WP_Mock::onFilter( 'special_filter' )
-		        ->with( 'nwk_style_debug' )
+		        ->with( 'project_style_debug' )
 		        ->reply( true );
 
 		styles();
@@ -156,7 +156,7 @@ class Core_Tests extends Base\TestCase {
 		// Setup
 		$url = 'template_url/humans.txt';
 		$meta = '<link type="text/plain" rel="author" href="template_url/humans.txt" />';
-		\WP_Mock::onFilter( 'nwk_humans' )->with( $url )->reply( $url );
+		\WP_Mock::onFilter( 'project_humans' )->with( $url )->reply( $url );
 		\WP_Mock::wpPassThruFunction( 'esc_url' );
 
 		// Act

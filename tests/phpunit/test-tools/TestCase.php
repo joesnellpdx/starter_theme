@@ -1,6 +1,6 @@
 <?php
 
-namespace NW_Kids\NWKids_Theme;
+namespace Project\Project_Theme;
 
 use PHPUnit_Framework_TestResult;
 use Text_Template;

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /**
- * NW Kids Theme
- * http://www.nwkidsmagazine.com/
+ * Project Theme
+ * http://www.projectidsmagazine.com/
  *
  * Copyright (c) 2016 Joe Snell
  * Licensed under the GPL-2.0+ license.
@@ -559,7 +559,7 @@ object,
   max-width: 100%;
   height: auto; }
 
-.js .nwk-video, .js
+.js .project-video, .js
 .flexslider, .js
 video, .js
 img, .js
@@ -569,7 +569,7 @@ img, .js
   -webkit-filter: saturate(0.02) contrast(0.3);
           filter: saturate(0.02) contrast(0.3); }
 
-.js-images-loaded .nwk-video, .js-images-loaded
+.js-images-loaded .project-video, .js-images-loaded
 .flexslider, .js-images-loaded
 video, .js-images-loaded
 img, .js-images-loaded
@@ -596,13 +596,13 @@ figure {
 figcaption {
   font-style: italic; }
 
-.nwk-video {
+.project-video {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   margin: 16px 0px;
   margin: 1.6rem 0rem;
   border: 3px solid #FFF;
   border-radius: 1.5px; }
-  .nwk-modal .nwk-video {
+  .project-modal .project-video {
     margin: 0px;
     margin: 0rem; }
 

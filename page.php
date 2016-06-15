@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package NW Kids Theme
+ * @package Project Theme
  * @since 0.1.0
  */
 

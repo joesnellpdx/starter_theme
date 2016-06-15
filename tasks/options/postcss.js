@@ -7,7 +7,7 @@ module.exports = {
 			]
 		},
 		files: { 
-			'assets/css/nw-kids-theme.css': [ 'assets/css/nw-kids-theme.css' ]
+			'assets/css/project-theme.css': [ 'assets/css/project-theme.css' ]
 		}
 	}
 };

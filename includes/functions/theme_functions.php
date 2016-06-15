@@ -1,5 +1,5 @@
 <?php
-namespace NW_Kids\NWKids_Theme\Theme_Functions;
+namespace Project\Project_Theme\Theme_Functions;
 
 /**
  * Set up theme and register custom theme functions.
@@ -40,23 +40,23 @@ function gruntscript(){
 
 	$gicon_load_path = 'assets/grunticon/output/grunticon.loader-file.js';
 
-//	if(file_exists( NWK_PATH . $gicon_load_path )){
-//		$function_file = NWK_PATH . $gicon_load_path;
+//	if(file_exists( Project_PATH . $gicon_load_path )){
+//		$function_file = Project_PATH . $gicon_load_path;
 //		var_dump($function_file);
 //		var_dump(file_get_contents($function_file));
 //	}
 
-	if(file_exists( NWK_PATH . $gicon_load_path )){
-		$gruntscript = file_get_contents(NWK_PATH . $gicon_load_path);
+	if(file_exists( Project_PATH . $gicon_load_path )){
+		$gruntscript = file_get_contents(Project_PATH . $gicon_load_path);
 
 		if(!empty($gruntscript)) {
 
 			$html = '';
 			$html .= '<script>';
 			$html .= $gruntscript;
-			$html .= 'grunticon(["' . NWK_URL . '/assets/grunticon/output/icons.data.svg.css", "' . NWK_URL . '/assets/grunticon/output/icons.data.png.css", "' . NWK_URL . '/assets/grunticon/output/icons.fallback.css"], grunticon.svgLoadedCallback);';
+			$html .= 'grunticon(["' . Project_URL . '/assets/grunticon/output/icons.data.svg.css", "' . Project_URL . '/assets/grunticon/output/icons.data.png.css", "' . Project_URL . '/assets/grunticon/output/icons.fallback.css"], grunticon.svgLoadedCallback);';
 			$html .= '</script>';
-			$html .= '<noscript><link href="' . NWK_URL . '/assets/grunticon/output/icons.fallback.css" rel="stylesheet"></noscript>';
+			$html .= '<noscript><link href="' . Project_URL . '/assets/grunticon/output/icons.fallback.css" rel="stylesheet"></noscript>';
 
 
 			echo $html;

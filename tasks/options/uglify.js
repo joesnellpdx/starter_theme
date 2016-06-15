@@ -1,7 +1,7 @@
 module.exports = {
 	all: {
 		files: {
-			'assets/js/nw-kids-theme.min.js': ['assets/js/nw-kids-theme.js']
+			'assets/js/project-theme.min.js': ['assets/js/project-theme.js']
 		},
 		options: {
 			banner: '/*! <%= pkg.title %> - v<%= pkg.version %>\n' +

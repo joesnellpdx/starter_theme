@@ -1,6 +1,6 @@
 /**
- * NW Kids Theme
- * http://www.nwkidsmagazine.com/
+ * Project Theme
+ * http://www.projectidsmagazine.com/
  *
  * Copyright (c) 2016 Joe Snell
  * Licensed under the GPL-2.0+ license.

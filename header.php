@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package NW Kids Theme
+ * @package Project Theme
  * @since 0.1.0
  */
 
@@ -31,13 +31,13 @@
 			if (  is_home() ) : ?>
 				<h1 class="primary-heading">
 					<a class="primary-heading__link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="is-vishidden"><?php bloginfo( 'name' ); ?></span>
-						<figure class="primary-heading__logo fixedratio nwkids-icon-logo" title="<?php bloginfo( 'name' ); ?>"></figure>
+						<figure class="primary-heading__logo fixedratio projectids-icon-logo" title="<?php bloginfo( 'name' ); ?>"></figure>
 					</a>
 				</h1>
 			<?php else : ?>
 				<span class="primary-heading">
 					<a class="primary-heading__link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="is-vishidden"><?php bloginfo( 'name' ); ?></span>
-						<figure class="primary-heading__logo fixedratio nwkids-icon-logo" title="<?php bloginfo( 'name' ); ?>"></figure>
+						<figure class="primary-heading__logo fixedratio projectids-icon-logo" title="<?php bloginfo( 'name' ); ?>"></figure>
 					</a>
 				</span>
 
