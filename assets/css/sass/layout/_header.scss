@@ -1,0 +1,22 @@
+////
+/// @group Layout
+////
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+.primary-heading {
+  &__link {
+    width: 100%;
+    max-width: $logo-width;
+    display: block;
+    overflow: hidden;
+  }
+  &__logo {
+      margin: 0;
+      padding-top: $logo-ratio;
+      background-position: center;
+      background-size: cover;
+  }
+}

@@ -1,0 +1,318 @@
+////
+/// @group Global
+////
+
+
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+
+//Colors
+/// Color gray
+/// @type Color
+$gray: #808080;
+/// Color gray-light
+/// @type Color
+$gray__light: #F9F9F9;
+/// Color gray-light-2
+/// @type Color
+$gray__light-2: #EEE;
+/// Color gray-light-3
+/// @type Color
+$gray__light-3: #DDD;
+/// Color gray-med
+/// @type Color
+$gray__med: #666;
+/// Color gray-dark
+/// @type Color
+$gray__dark: #333;
+/// Color gray-dark-2
+/// @type Color
+$gray__dark-2: #131313;
+/// Color white
+/// @type Color
+$white: #FFF;
+/// Color black
+/// @type Color
+$black: #000;
+/// Color dim
+/// @type Color
+$dim: rgba(0,0,0,0.5);
+$error: #F00;
+/// Color error
+/// @type Color
+$valid: #089E00;
+/// Color valid
+/// @type Color
+$warning: #FFF664;
+/// Color information
+/// @type Color
+$information: #000DB5;
+
+/// Color brand__one
+/// @type Color
+$brand__one: #F80;
+/// Color brand__two
+/// @type Color
+$brand__two: $gray__light;
+/// Color brand__three
+/// @type Color
+$brand__dark: #E65100;
+/// Color brand__four
+/// @type Color
+$brand__four: #FFCC80;
+
+/// Color background__one
+/// @type Color
+$background__one: $brand__one;
+/// Color background__one
+/// @type Color
+$background__two: $brand__dark;
+
+/// Color link__color
+/// @type Color
+$link__color: $brand__one;
+/// Color link__hover
+/// @type Color
+$link__hover: $brand__dark;
+/// Color link__visited
+/// @type Color
+$link__visited: $brand__one;
+
+//Defaults
+/// Space space
+$space: 1.6rem;
+/// Space space-and-half
+$space-and-half: $space*100000.5;
+/// Space space-double
+$space-double: $space*2;
+/// Space space-quad
+$space-quad: $space*4;
+/// Space half
+$space-half: $space/2;
+/// Space quarter
+$space-quarter: $space/4;
+
+/// Pad pad
+$pad: 1rem;
+/// Pad pad-and-half
+$pad-and-half: $pad*100000.5;
+/// Pad pad-double
+$pad-double: $pad*2;
+/// Pad pad-half
+$pad-half: $pad/2;
+/// Pad pad-quarder
+$pad-quarter: $pad/4;
+
+/// Btn padding-x
+$btn-padding-x: 1rem !default;
+/// Btn padding-y
+$btn-padding-y: 0.5rem !default;
+/// Btn line-height
+$btn-line-height: 1.25 !default;
+/// Btn font-weight
+$btn-font-weight: normal !default;
+/// Btn box-shadow
+$btn-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+/// Btn active box-shadow
+$btn-active-box-shadow: 0 0 0 rgba(0,0,0,0.0), 0 0 0 rgba(0,0,0,0.0);;
+/// Btn primary color
+$btn-primary-color: #FFF !default;
+/// Btn primary bg
+$btn-primary-bg: $brand__one !default;
+/// Btn primary border
+$btn-primary-border: $btn-primary-bg !default;
+
+//Typography
+/// Font font
+$font: "proxima-nova", "Helvetica", "Arial", sans-serif;
+/// Font font__secondary
+$font__secondary: Georgia, Times, "Times New Roman", serif;
+/// Font font__code
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+/// Font font__pre
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+/// Font font__line-height-body
+$font__line-height-body: 1.4;
+/// Font font__line-height-headers
+$font__line-height-headers: 1.2;
+/// Font font__line-height-pre
+$font__line-height-pre: 1.5;
+
+/// Headings margin-bottom
+$headings__margin-bottom: $space !default;
+/// Headings font-family
+$headings__font-family: inherit !default;
+/// Headings font-weight
+$headings__font-weight: 500 !default;
+/// Headings line-height
+$headings__line-height: 1.2 !default;
+/// Headings color
+$headings__color: inherit !default;
+
+/// Font Size font-size__small
+$font-size__small: (0.75 * $space);
+/// Font Size font-size__small-2
+$font-size__small-2: (0.875 * $space);
+/// Font Size font-size__norm
+$font-size__norm: (1 * $space);
+/// Font Size font-size__med-2
+$font-size__med-2: (1.0625 * $space);
+/// Font Size font-size__med-3
+$font-size__med-3: (1.1875 * $space);
+/// Font Size font-size__large
+$font-size__large: (1.25 * $space);
+
+/// Font Size font-size__h1
+$font-size__h1: 2.5rem !default;
+/// Font Size font-size__h2
+$font-size__h2: 2rem !default;
+/// Font Size font-size__h3
+$font-size__h3: 1.75rem !default;
+/// Font Size font-size__h4
+$font-size__h4: 1.5rem !default;
+/// Font Size font-size__h5
+$font-size__h5: 1.25rem !default;
+/// Font Size font-size__h6
+$font-size__h6: $font-size__norm !default;
+
+/// Font Size font-size__display1
+$font-size__display1: 6rem !default;
+/// Font Size font-size__display2
+$font-size__display2: 5.5rem !default;
+/// Font Size font-size__display3
+$font-size__display3: 4.5rem !default;
+/// Font Size font-size__display4
+$font-size__display4: 3.5rem !default;
+
+/// Font Weight font-weight__display1
+$font-weight__display1: 300 !default;
+/// Font Weight font-weight__display2
+$font-weight__display2: 300 !default;
+/// Font Weight font-weight__display3
+$font-weight__display3: 300 !default;
+/// Font Weight font-weight__display4
+$font-weight__display4: 300 !default;
+
+/// Font Color font__color
+/// @type Color
+$font__color: $gray__dark;
+
+///Borders border__thin
+$border__thin: 1px;
+///Borders border__reg
+$border__reg: 2px;
+///Borders border__med
+$border__med: 3px;
+///Borders border__thick
+$border__thick: 7px;
+
+
+///Breakpoints bp-small
+$bp-small: 24rem;
+///Breakpoints bp-small-2
+$bp-small-2: 29.75rem;
+///Breakpoints bp-small-3
+$bp-small-3: 39.8rem;
+///Breakpoints bp-med
+$bp-med: 46.8rem;
+///Breakpoints bp-med-2
+$bp-med-2: 48rem;
+///Breakpoints bp-large
+$bp-large: 50rem;
+///Breakpoints bp-large-2
+$bp-large-2: 66rem;
+///Breakpoints bp-xl
+$bp-xl: 73rem;
+///Breakpoints bp-xxl
+$bp-xxl: 89rem;
+///Breakpoints bp-xxxl
+$bp-xxxl: 93rem;
+
+
+///Layout max-width
+$max-width: 72rem;
+///Layout nav-breal
+$nav-break: $bp-med-2;
+
+/// Logo logo-width
+$logo-width: 8rem;
+/// Logo logo-ratio
+$logo-ratio: 37%;
+
+/// Footer footer-height
+$footer-height: 5.4rem;
+
+/// Transition timing
+$transition__norm: 0.3s;
+
+/*------------------------------------*\
+    $Sanitize Variables
+\*------------------------------------*/
+
+/// Controls the page background color (default: #ffffff)
+$root-background-color: $white;
+
+/// Controls the page box model inherited by all elements (default: border-box)
+$root-box-sizing: border-box;
+
+/// Controls the page text color inherited by all elements (default: #000000)
+$root-color: $font__color;
+
+/// Controls the default page cursor (default: default)
+$root-cursor: default;
+
+/// Controls the page font inherited by all elements (default: sans-serif)
+$root-font-family: $font;
+
+/// Controls the page text size inherited by all elements (default: 100%).
+/// Set to 93.5 with line-height 1.5 to set up 1rem = 10px
+$root-font-size: 93.75%;
+
+/// Controls the page text line height inherited by all elements (default: 1.5)
+$root-line-height: 1.5;
+
+/// Controls how background images are repeated on all elements (default: no-repeat)
+$background-repeat: no-repeat;
+
+/// Controls the background color of form controls (button, input, select, textarea) (default: transparent)
+$form-element-background-color: transparent;
+
+/// Controls the text color of form controls (button, input, select, textarea) (default: inherit)
+$form-element-color: inherit;
+
+/// Controls the minimum height of form controls (button, [type="button"], [type="date"], [type="datetime"], [type="datetime-local"], [type="email"], [type="month"], [type="number"], [type="password"], [type="reset"], [type="search"], [type="submit"], [type="tel"], [type="text"], [type="time"], [type="url"], [type="week"], select, textarea) (default: 1.5em)
+$form-element-min-height: 1.5em;
+
+/// Controls the vertical align of media elements (audio, canvas, iframe, img, svg, video) (default: middle)
+$media-element-vertical-align: middle;
+
+/// Controls the font used by markup elements (code, kbd, pre, samp) (default: monospace)
+$monospace-font-family: $font__code;
+
+/// Controls the list style for navigation lists (nav ol, nav ul) (default: none)
+$nav-list-style: none;
+
+/// Controls the background color of selected text (default: #b3d4fc)
+$selection-background-color: $brand__one;
+
+/// Controls the text color of selected text (default: #ffffff)
+$selection-color: $white;
+
+/// Controls the text shadow of selected text (default: none)
+$selection-text-shadow: none;
+
+/// Controls the text size of small elements (default: 75%)
+$small-font-size: $font-size__small;
+
+/// Controls how borders collapse within table elements (default: collapse)
+$table-border-collapse: collapse;
+
+/// Controls the distance between borders within table elements (default: 0)
+$table-border-spacing: 0;
+
+/// Controls the resizability of textarea elements (default: vertical)
+$textarea-resize: vertical;
+
+/// Import Sanitize
+@import "../../../../bower_components/sanitize-css/lib/sanitize.scss";

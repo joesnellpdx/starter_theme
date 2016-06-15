@@ -1,0 +1,41 @@
+////
+/// @group Base
+////
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+
+body {
+	font-size: $space;
+	min-height: 100vh;
+
+	-webkit-text-size-adjust: 100%;
+
+	.wf-active & {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+/*------------------------------------*\
+    $LINKS
+\*------------------------------------*/
+a {
+	@include transition();
+
+	text-decoration: none;
+	color: $link__color;
+	outline: 0;
+
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	&:visited {
+		color: $link__visited;
+	}
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: $link__hover;
+		outline: 0;
+	}
+}

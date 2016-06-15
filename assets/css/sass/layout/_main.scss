@@ -1,0 +1,18 @@
+////
+/// @group Layout
+////
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+
+.container {
+  padding-top: $space-double;
+  padding-bottom: $space-double;
+  &__content {
+    max-width: $max-width;
+    padding-left: $space;
+    padding-right: $space;
+    margin: 0 auto;
+  }
+}

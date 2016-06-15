@@ -1,0 +1,55 @@
+////
+/// @group Base
+////
+
+/*------------------------------------*\
+	$MEDIA
+\*------------------------------------*/
+
+/* Flexible Media */
+img,
+video,
+object,
+.wp-caption {
+	max-width: 100%;
+	height: auto;
+}
+
+.nwk-video,
+.flexslider,
+video,
+img,
+.background-image {
+	@include fade-in;
+}
+
+embed,
+iframe,
+object {
+	max-width: 100%;
+	margin-bottom: $space;
+}
+
+figure {
+	margin-bottom: $space;
+	&.fixedratio {
+		margin: 0;
+		background-position: center;
+		background-size: cover;
+	}
+}
+
+figcaption {
+	font-style: italic;
+}
+
+.nwk-video {
+	@include box-shadow(sm-med);
+
+	margin: $space 0rem;
+	border: $border__med solid $white;
+	border-radius: ($border__med * 0.5);
+	.nwk-modal & {
+		margin: 0rem;
+	}
+}

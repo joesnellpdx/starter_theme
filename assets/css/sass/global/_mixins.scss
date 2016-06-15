@@ -1,0 +1,58 @@
+////
+/// @group Global
+////
+
+/*------------------------------------*\
+	$MIXINS
+\*------------------------------------*/
+
+/// Box Shadow Mixin
+/// @example @include box-shadow(med);
+/// @output box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+/// @param {string} $boxshadow__size [med] - Box-shadow size
+@mixin box-shadow($boxshadow__size: med) {
+	@if $boxshadow__size == "med" {
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	} @else if $boxshadow__size == "none" {
+		box-shadow: none;
+	} @else if $boxshadow__size == "start" {
+		box-shadow: 0 0 0 rgba(0,0,0,0.0), 0 0 0 rgba(0,0,0,0.0);
+	} @else if $boxshadow__size == "sm" {
+		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	} @else if $boxshadow__size == "sm-med" {
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	} @else if $boxshadow__size == "med-lg" {
+		box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	} @else if $boxshadow__size == "lg" {
+		box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+	}
+}
+
+/* Fade In
+	Usage: @include fade-in;
+*/
+/// Fade In Mixin
+/// @example @include fade-in();
+@mixin fade-in {
+	.js & {
+		transition: filter 1.5s ease-out,  -webkit-filter 1.5s ease-out, opacity 1s ease-out;
+		opacity: 0;
+
+		filter: saturate(0.02) contrast(0.3);
+	}
+	.js-images-loaded & {
+		opacity: 1;
+
+		filter: saturate(1) contrast(1);
+	}
+}
+
+/// Transition Mixin
+/// @example @include transition(all,2s,ease-out);
+/// @output transition: all .2s ease-out;
+/// @param {string} $what [all] - CSS Property
+/// @param {string} $time [0.3s] - Transition duration
+/// @param {string} $how [ease-out] - Transition timing function
+@mixin transition($what: all, $time: 0.3s, $how: ease-out) {
+	transition: $what $time $how;
+}

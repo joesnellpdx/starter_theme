@@ -1,0 +1,752 @@
+@charset "UTF-8";
+/**
+ * NW Kids Theme
+ * http://www.nwkidsmagazine.com/
+ *
+ * Copyright (c) 2016 Joe Snell
+ * Licensed under the GPL-2.0+ license.
+ */
+/*------------------------------------*	$FUNCTIONS
+\*------------------------------------*/
+/*------------------------------------*    $VARIABLES
+\*------------------------------------*/
+/*------------------------------------*    $Sanitize Variables
+\*------------------------------------*/
+/*! sanitize.css v3.3.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+/*
+ * Normalization
+ */
+abbr[title] {
+  text-decoration: underline;
+  text-decoration: underline dotted; }
+
+audio:not([controls]) {
+  display: none; }
+
+b,
+strong {
+  font-weight: bolder; }
+
+button {
+  -webkit-appearance: button;
+  overflow: visible; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+button:-moz-focusring,
+input:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+button,
+select {
+  text-transform: none; }
+
+details {
+  display: block; }
+
+hr {
+  overflow: visible; }
+
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%; }
+
+input {
+  -webkit-border-radius: 0; }
+  input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button; }
+  input[type="number"] {
+    width: auto; }
+  input[type="search"] {
+    -webkit-appearance: textfield; }
+    input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none; }
+
+main {
+  display: block; }
+
+pre {
+  overflow: auto; }
+
+progress {
+  display: inline-block; }
+
+summary {
+  display: block; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+template {
+  display: none; }
+
+textarea {
+  overflow: auto; }
+
+[hidden] {
+  display: none; }
+
+/*
+ * Universal inheritance
+ */
+*,
+::before,
+::after {
+  box-sizing: inherit; }
+
+* {
+  font-size: inherit;
+  line-height: inherit; }
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit; }
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
+
+/*
+ * Opinionated defaults
+ */
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+::before,
+::after {
+  border-style: solid;
+  border-width: 0; }
+
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation; }
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+  select::-ms-expand {
+    display: none; }
+  select::-ms-value {
+    color: currentColor; }
+
+svg {
+  fill: currentColor; }
+
+[aria-busy="true"] {
+  cursor: progress; }
+
+[aria-controls] {
+  cursor: pointer; }
+
+[aria-disabled] {
+  cursor: default; }
+
+[hidden][aria-hidden="false"] {
+  clip: rect(0 0 0 0);
+  display: inherit;
+  position: absolute; }
+  [hidden][aria-hidden="false"]:focus {
+    clip: auto; }
+
+/*
+ * Configurable defaults
+ */
+* {
+  background-repeat: no-repeat; }
+
+:root {
+  background-color: #FFF;
+  box-sizing: border-box;
+  color: #333;
+  cursor: default;
+  font: 62.5% "proxima-nova", "Helvetica", "Arial", sans-serif; }
+
+a {
+  text-decoration: none; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  color: inherit; }
+
+button,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+  min-height: 1.5em; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace, monospace; }
+
+nav ol,
+nav ul {
+  list-style: none; }
+
+small {
+  font-size: 12px;
+  font-size: 1.2rem; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+textarea {
+  resize: vertical; }
+
+::-moz-selection {
+  background-color: #F80;
+  color: #FFF;
+  text-shadow: none; }
+
+::selection {
+  background-color: #F80;
+  color: #FFF;
+  text-shadow: none; }
+
+/*------------------------------------*	$MIXINS
+\*------------------------------------*/
+/* Fade In
+	Usage: @include fade-in;
+*/
+/*------------------------------------*    $MAIN
+\*------------------------------------*/
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  -webkit-text-size-adjust: 100%; }
+  .wf-active body {
+    visibility: visible;
+    opacity: 1; }
+
+/*------------------------------------*    $LINKS
+\*------------------------------------*/
+a {
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+  color: #F80;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent; }
+  a:visited {
+    color: #F80; }
+  a:hover, a:focus {
+    text-decoration: none;
+    color: #E65100;
+    outline: 0; }
+
+/*------------------------------------*    $GLOBAL CLASSES
+\*------------------------------------*/
+/* Clearfix */
+.cf:before, blockquote:before,
+q:before,
+.cf:after,
+blockquote:after,
+q:after {
+  display: table;
+  content: ""; }
+  .flexbox .cf:before, .flexbox blockquote:before, .flexbox
+  q:before,
+  .flexbox
+  .cf:after,
+  .flexbox blockquote:after,
+  .flexbox
+  q:after {
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    -ms-flex-order: 1;
+        order: 1; }
+
+.cf:after, blockquote:after,
+q:after {
+  clear: both; }
+
+/* Completely remove from the flow and screen readers. */
+.is-hidden {
+  display: none !important;
+  visibility: hidden !important; }
+
+/* Completely remove from the flow but leave available to screen readers. */
+.is-vishidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0; }
+
+/* Floats */
+.right {
+  float: right;
+  padding: 0 0 10px 10px;
+  padding: 0 0 1rem 1rem; }
+
+.right-search {
+  float: right;
+  padding: 0 0 10px 0;
+  padding: 0 0 1rem 0; }
+
+.left {
+  float: left;
+  padding: 0 10px 10px 0;
+  padding: 0 1rem 1rem 0; }
+
+/* Text-Align */
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.align-left {
+  text-align: left; }
+
+/* Display Classes */
+@media all and (max-width: 46.8rem) {
+  .hide-small {
+    display: none; } }
+
+@media all and (min-width: 46.8rem) and (max-width: 50rem) {
+  .hide-med {
+    display: none; } }
+
+@media all and (min-width: 50rem) {
+  .hide-large {
+    display: none; } }
+
+.valid {
+  color: #089E00; }
+
+.error {
+  color: #F00; }
+
+.warning {
+  color: #FFF664; }
+
+.information {
+  color: #000DB5; }
+
+.font__secondary {
+  font-family: Georgia, Times, "Times New Roman", serif; }
+
+.color--one {
+  color: #F80; }
+
+.color--two {
+  color: #F9F9F9; }
+
+.background--one {
+  color: #FFF;
+  background-color: #F80; }
+
+.background--two {
+  color: #FFF;
+  background-color: #E65100; }
+
+/*------------------------------------*	$Headings
+\*------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+  color: inherit; }
+
+h1,
+.h1 {
+  font-size: 25px;
+  font-size: 2.5rem; }
+
+h2,
+.h2 {
+  font-size: 20px;
+  font-size: 2rem; }
+
+h3,
+.h3 {
+  font-size: 17.5px;
+  font-size: 1.75rem; }
+
+h4,
+.h4 {
+  font-size: 15px;
+  font-size: 1.5rem; }
+
+h5,
+.h5 {
+  font-size: 12.5px;
+  font-size: 1.25rem; }
+
+h6,
+.h6 {
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+.display-1 {
+  font-size: 60px;
+  font-size: 6rem;
+  font-weight: 300; }
+
+.display-2 {
+  font-size: 55px;
+  font-size: 5.5rem;
+  font-weight: 300; }
+
+.display-3 {
+  font-size: 45px;
+  font-size: 4.5rem;
+  font-weight: 300; }
+
+.display-4 {
+  font-size: 35px;
+  font-size: 3.5rem;
+  font-weight: 300; }
+
+/*------------------------------------*	$Text
+\*------------------------------------*/
+p {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem; }
+
+.entry-content ul, .entry-content
+ol {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+  padding-left: 40px;
+  padding-left: 4rem; }
+
+.entry-content ul {
+  list-style-type: disc; }
+
+.entry-content ol {
+  list-style-type: decimal; }
+
+hr {
+  margin-top: 16px;
+  margin-top: 1.6rem;
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+  border: 0;
+  border-top: 1px solid #333; }
+
+small,
+.small {
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: normal; }
+
+blockquote,
+q {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+  padding-left: 20px;
+  padding-left: 2rem; }
+  blockquote > p,
+  q > p {
+    font-size: 20px;
+    font-size: 2rem;
+    position: relative; }
+    blockquote > p:first-of-type,
+    q > p:first-of-type {
+      margin-top: 0px; }
+      blockquote > p:first-of-type:before,
+      q > p:first-of-type:before {
+        font-size: 40px;
+        font-size: 4rem;
+        position: absolute;
+        top: -0.15em;
+        left: -0.5em;
+        content: "\201C";
+        color: #808080; }
+    blockquote > p:last-of-type:after,
+    q > p:last-of-type:after {
+      font-size: 40px;
+      font-size: 4rem;
+      line-height: 0;
+      position: relative;
+      bottom: -0.2em;
+      margin-bottom: -0.5em;
+      margin-left: 0.0em;
+      content: "\201D";
+      color: #808080; }
+  blockquote cite,
+  q cite {
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-style: normal;
+    display: block;
+    float: right;
+    clear: both;
+    margin-top: 16px;
+    margin-top: 1.6rem; }
+    blockquote cite:before,
+    q cite:before {
+      margin-right: 4px;
+      margin-right: 0.4rem;
+      content: "–"; }
+    blockquote cite > span,
+    q cite > span {
+      display: block; }
+  blockquote .cite__name,
+  q .cite__name {
+    font-weight: bold; }
+
+/*------------------------------------*	$MEDIA
+\*------------------------------------*/
+/* Flexible Media */
+img,
+video,
+object,
+.wp-caption {
+  max-width: 100%;
+  height: auto; }
+
+.js .nwk-video, .js
+.flexslider, .js
+video, .js
+img, .js
+.background-image {
+  transition: filter 1.5s ease-out,  -webkit-filter 1.5s ease-out, opacity 1s ease-out;
+  opacity: 0;
+  -webkit-filter: saturate(0.02) contrast(0.3);
+          filter: saturate(0.02) contrast(0.3); }
+
+.js-images-loaded .nwk-video, .js-images-loaded
+.flexslider, .js-images-loaded
+video, .js-images-loaded
+img, .js-images-loaded
+.background-image {
+  opacity: 1;
+  -webkit-filter: saturate(1) contrast(1);
+          filter: saturate(1) contrast(1); }
+
+embed,
+iframe,
+object {
+  max-width: 100%;
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem; }
+
+figure {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem; }
+  figure.fixedratio {
+    margin: 0;
+    background-position: center;
+    background-size: cover; }
+
+figcaption {
+  font-style: italic; }
+
+.nwk-video {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin: 16px 0px;
+  margin: 1.6rem 0rem;
+  border: 3px solid #FFF;
+  border-radius: 1.5px; }
+  .nwk-modal .nwk-video {
+    margin: 0px;
+    margin: 0rem; }
+
+/*------------------------------------*    $HELPER CLASSES
+\*------------------------------------*/
+/*------------------------------------*    $WORDPRESS CORE
+\*------------------------------------*/
+.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto; }
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+a img.alignnone {
+  margin: 5px 20px 20px 0; }
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center; }
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px; }
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto; }
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px; }
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 8.75px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */ }
+
+/*------------------------------------*    $NAVIGATION
+\*------------------------------------*/
+/*------------------------------------*    $BUTTONS
+\*------------------------------------*/
+/*------------------------------------*    $FORMS
+\*------------------------------------*/
+/*------------------------------------*    $GRID
+\*------------------------------------*/
+/*------------------------------------*    $HEADER
+\*------------------------------------*/
+.primary-heading__link {
+  width: 100%;
+  max-width: 80px;
+  max-width: 8rem;
+  display: block;
+  overflow: hidden; }
+
+.primary-heading__logo {
+  margin: 0;
+  padding-top: 37%;
+  background-position: center;
+  background-size: cover; }
+
+/*------------------------------------*    $SIDEBAR
+\*------------------------------------*/
+/*------------------------------------*    $MAIN
+\*------------------------------------*/
+.container {
+  padding-top: 32px;
+  padding-top: 3.2rem;
+  padding-bottom: 32px;
+  padding-bottom: 3.2rem; }
+  .container__content {
+    max-width: 720px;
+    max-width: 72rem;
+    padding-left: 16px;
+    padding-left: 1.6rem;
+    padding-right: 16px;
+    padding-right: 1.6rem;
+    margin: 0 auto; }
+
+/*------------------------------------*    $FOOTER
+\*------------------------------------*/
+/*------------------------------------*    $STATE
+\*------------------------------------*/
+/* FOR IMAGE LOAD STATE - SEE MIXINS.SCSS : @mixin fade-in */
+/*------------------------------------*    $SHAME
+\*------------------------------------*/

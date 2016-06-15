@@ -1,0 +1,166 @@
+////
+/// @group Base
+////
+
+/*------------------------------------*\
+	$Headings
+\*------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $headings__font-family;
+	font-weight: $headings__font-weight;
+	line-height: $headings__line-height;
+	margin-bottom: $headings__margin-bottom;
+	color: $headings__color;
+}
+
+h1,
+.h1 {
+	font-size: $font-size__h1;
+}
+h2,
+.h2 {
+	font-size: $font-size__h2;
+}
+h3,
+.h3 {
+	font-size: $font-size__h3;
+}
+h4,
+.h4 {
+	font-size: $font-size__h4;
+}
+h5,
+.h5 {
+	font-size: $font-size__h5;
+}
+h6,
+.h6 {
+	font-size: $font-size__h6;
+}
+
+// Display classes
+.display-1 {
+	font-size: $font-size__display1;
+	font-weight: $font-weight__display1;
+}
+.display-2 {
+	font-size: $font-size__display2;
+	font-weight: $font-weight__display2;
+}
+.display-3 {
+	font-size: $font-size__display3;
+	font-weight: $font-weight__display3;
+}
+.display-4 {
+	font-size: $font-size__display4;
+	font-weight: $font-weight__display4;
+}
+
+/*------------------------------------*\
+	$Text
+\*------------------------------------*/
+p {
+	margin-bottom: $space;
+}
+
+// lists
+ul,
+ol {
+	.entry-content & {
+		margin-bottom: $space;
+		padding-left: ($pad * 4);
+	}
+}
+ul {
+	.entry-content & {
+		list-style-type: disc;
+	}
+}
+ol {
+	.entry-content & {
+		list-style-type: decimal;
+	}
+}
+
+// Horizontal rules
+hr {
+	margin-top: $space;
+	margin-bottom: $space;
+	border: 0;
+	border-top: $border__thin solid $font__color;
+}
+
+// Emphasis
+small,
+.small {
+	font-size: $font-size__small;
+	font-weight: normal;
+}
+
+// Blockquotes
+blockquote,
+q {
+	@extend .cf;
+
+	margin-bottom: $space;
+	padding-left: $pad-double;
+	> p {
+		font-size: $font-size__large;
+		position: relative;
+		&:first-of-type {
+			margin-top: 0px;
+			&:before {
+				font-size: 4rem;
+				position: absolute;
+				top: -0.15em;
+				left: -0.5em;
+				content: "\201C";
+				color: $gray;
+			}
+		}
+		&:last-of-type {
+			&:after {
+				font-size: 4rem;
+				line-height: 0;
+				position: relative;
+				bottom: -0.2em;
+				margin-bottom: -0.5em;
+				margin-left: 0.0em;
+				content: "\201D";
+				color: $gray;
+			}
+		}
+	}
+	cite {
+		font-size: $font-size__norm;
+		font-style: normal;
+		display: block;
+		float: right;
+		clear: both;
+		margin-top: $space;
+		&:before {
+			margin-right: $space-quarter;
+			content: "–";
+		}
+		> span {
+			display: block;
+		}
+	}
+	.cite {
+		&__name {
+			font-weight: bold;
+		}
+	}
+}
