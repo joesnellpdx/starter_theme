@@ -7,12 +7,24 @@ module.exports = {
 		' * Licensed GPL-2.0+' +
 		' */\n'
 	},
-	main: {
+	srcJS: {
 		src: [
-			// 'assets/js/vendor/vendor-file.js',
-			'bower_components/imagesloaded/imagesloaded.pkgd.js',
-			'assets/js/src/project-theme.js'
+			'assets/js/src/*.js'
 		],
-			dest: 'assets/js/project-theme.js'
+		dest: 'assets/js/src.js'
+	},
+	vendorJS: {
+		src: [
+			'bower_components/imagesloaded/imagesloaded.pkgd.js',
+			'assets/js/vendor/*.js'
+		],
+		dest: 'assets/js/vendor.js'
+	},
+	mainJS: {
+		src: [
+			'assets/js/vendor/*.js',
+			'assets/js/src/*.js'
+		],
+		dest: 'assets/js/project-theme.js'
 	}
 };

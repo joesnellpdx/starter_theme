@@ -1,6 +1,6 @@
 module.exports = {
 	livereload: {
-		files: ['assets/css/project-theme.min.css', 'assets/js/src/*.js', '*.html', '*.php', 'images/src/**/*.{png,jpg,jpeg,gif,webp,svg}', 'assets/grunticon/output/grunticon.loader-file.js'],
+		files: ['assets/css/project-theme.min.css', 'assets/js/**/*.js', '*.html', '*.php', 'images/src/**/*.{png,jpg,jpeg,gif,webp,svg}', 'assets/grunticon/output/grunticon.loader-file.js'],
 		options: {
 			livereload: true
 		}
@@ -20,7 +20,7 @@ module.exports = {
 		}
 	},
 	image: {
-		files: ['images/src/**/*', 'images/src/**/*'],
+		files: ['assets/images/src/**/*', 'assets/images/src/**/*'],
 		tasks: ['image'],
 		options: {
 			debounceDelay: 500
